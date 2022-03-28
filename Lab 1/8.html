@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <style>
+            p{
+                width: 200px;
+                height: 100px;
+                background-color: rgb(206, 56, 206);
+                border: 1px solid purple;
+                display: none;
+            }
+            div{
+                width: 200px;
+                height: 20px;
+                padding: 10px;
+                background-color: black;
+                color: white;
+                border: 1px solid rgb(196, 196, 196);
+                
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="div1">Panel1</div>
+        <p id='p1'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div id="div2">Panel2</div>
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <div id="div3">Panel3</div>
+        <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <div id="div4">Panel4</div>
+        <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        
+
+        <script>
+            $(document).ready(function(){
+                $("#div1").click(function(){
+                    $("#p1").slideToggle();
+                })
+                $("#div2").click(function(){
+                    $("#p2").slideToggle();
+                })
+                $("#div3").click(function(){
+                    $("#p3").slideToggle();
+                })
+                $("#div4").click(function(){
+                    $("#p4").slideToggle();
+                })
+            })
+        </script>
+    </body>
+</html>

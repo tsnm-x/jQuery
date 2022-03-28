@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div></div>
+        <script>
+        var arr = [1,2,3,4,5,6,7,8,9,10]; 
+        $(document).ready(function(){
+            
+            $(arr).each(function(i){
+
+                arr[i] = this+10;
+            })
+            $("div").append(arr);
+        }) 
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            #drop{
+                height: 100px;
+                width: 100px;
+                border: 1px solid purple;
+                background-color: plum;
+            }
+            img{
+                height: 30px;
+                width: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="drop"></div>
+        <div id="div1"><img src="1.jpg" id="drag"></div>
+
+        <script>
+            $(document).ready(function(){
+                $("#drag").draggable(
+                    {
+                        revert:"invalid"
+                        
+                    }
+                )
+
+                $("#drop").droppable({
+                    accept: "#drag",
+                    drop:function(){
+                        $("#drop").css("background-color","red");
+                    }
+                })
+                
+            })
+        </script>
+    </body>
+</html>

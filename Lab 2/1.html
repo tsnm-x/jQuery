@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <div id="div1"></div>
+        <div id="div2">
+            <label for="username">Enter your username: </label><br><input type="text" id="username"><br>
+            <label for="password">Enter your password: </label><br><input type="password" id="password"><br>
+            <input type="checkbox" id="check"/><label for="check">Remember password</label>
+        </div>
+
+        <button id="btn">Open Login Window</button>
+
+        <script>
+            var login = $("#div2").dialog(
+                    {
+                        modal:true,
+                        autoOpen: false,
+                        buttons:{
+                            LOGIN: function(){
+                                $("#btn").css("display","none");
+                                $("#div1").text("Welcome, "+ $("#username").val());
+                                $(login).dialog("close");
+                            },
+                            Cancel: function(){
+                                $(login).dialog("close");
+                            }
+                        }
+                    }
+                );
+            $(document).ready(
+                
+                $("#btn").click(function(){
+                    login.dialog("open");
+                })
+            )
+        </script>
+    </body>
+</html>

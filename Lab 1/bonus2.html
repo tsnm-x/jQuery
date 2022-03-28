@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <style>
+            div{
+                border-radius: 50%;
+                width: 200px;
+                height: 200px;
+                background-color: purple;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <script> 
+        $(document).ready(function(){
+            $("div").mouseover(function(){
+                $("div").animate({
+                    opacity: 0
+                }, 3000, function(){
+                    alert("animation is completed!")
+                })
+            })
+        }) 
+        </script>
+    </body>
+</html>

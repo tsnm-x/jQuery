@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="div1">This is a div</div>
+        <button id="btn1">Apply CSS</button>
+        
+        <script>
+            $(document).ready(function(){
+                $("#btn1").click(function(){
+                    $("#div1").css("border", "3px solid red");
+                })
+            })
+        </script>
+    </body>
+</html>
